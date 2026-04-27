@@ -1,0 +1,11 @@
+using Shared.HomeCare.Entities;
+using Shared.HomeCare.Interfaces.Repositories;
+
+namespace Public.Domain.HomeCare.Interface
+{
+    public interface IUserRepository : IGenericRepository<User>
+    {
+        Task<User?> GetByEmailAsync(string email);
+        Task<User?> GetFreshByIdAsync(int id);
+    }
+}

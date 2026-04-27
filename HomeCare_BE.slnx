@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Admin/">
+    <Project Path="Admin/Admin.Api.HomeCare/Admin.Api.HomeCare.csproj" />
+    <Project Path="Admin/Admin.Application.HomeCare/Admin.Application.HomeCare.csproj" />
+    <Project Path="Admin/Admin.Domain.HomeCare/Admin.Domain.HomeCare.csproj" />
+    <Project Path="Admin/Admin.Infrastructure.HomeCare/Admin.Infrastructure.HomeCare.csproj" />
+  </Folder>
+  <Folder Name="/Public/">
+    <Project Path="Public/Public.Api.HomeCare/Public.Api.HomeCare.csproj" />
+    <Project Path="Public/Public.Application.HomeCare/Public.Application.HomeCare.csproj" />
+    <Project Path="Public/Public.Domain.HomeCare/Public.Domain.HomeCare.csproj" />
+    <Project Path="Public/Public.Infrastructure.HomeCare/Public.Infrastructure.HomeCare.csproj" />
+  </Folder>
+  <Folder Name="/Share/">
+    <Project Path="Share/Shared.HomeCare/Shared.HomeCare.csproj" />
+  </Folder>
+</Solution>

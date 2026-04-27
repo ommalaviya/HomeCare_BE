@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!--  Generic CRUD / Operation Results  -->
+
+  <data name="AddedSuccessfully" xml:space="preserve">
+    <value>{0} added successfully.</value>
+  </data>
+  <data name="RemovedSuccessfully" xml:space="preserve">
+    <value>{0} removed successfully.</value>
+  </data>
+  <data name="CreatedSuccessfully" xml:space="preserve">
+    <value>{0} created successfully.</value>
+  </data>
+  <data name="UpdatedSuccessfully" xml:space="preserve">
+    <value>{0} updated successfully.</value>
+  </data>
+  <data name="DeletedSuccessfully" xml:space="preserve">
+    <value>{0} deleted successfully.</value>
+  </data>
+  <data name="GetSuccessfully" xml:space="preserve">
+    <value>{0} retrieved successfully.</value>
+  </data>
+  <data name="SuccessResponse" xml:space="preserve">
+    <value>Operation completed successfully.</value>
+  </data>
+  <data name="FailedResponse" xml:space="preserve">
+    <value>An unexpected error occurred. Please try again.</value>
+  </data>
+  <data name="InvalidRequest" xml:space="preserve">
+    <value>Invalid requested data.</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>{0} not found.</value>
+  </data>
+  <data name="DuplicateRecord" xml:space="preserve">
+    <value>A {0} with this property already exists.</value>
+  </data>
+  <data name="NoImage" xml:space="preserve">
+    <value>{0} has no image on record.</value>
+  </data>
+
+  <!--  Generic Validation  -->
+
+  <data name="Required" xml:space="preserve">
+    <value>{0} is required.</value>
+  </data>
+  <data name="AtLeastOneFieldRequired" xml:space="preserve">
+    <value>At least one of the following fields is required: {0}.</value>
+  </data>
+  <data name="MinLength" xml:space="preserve">
+    <value>{0} must be at least {1} characters.</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>{0} must not exceed {1} characters.</value>
+  </data>
+  <data name="NameMaxLength" xml:space="preserve">
+    <value>Name cannot exceed 150 characters.</value>
+  </data>
+  <data name="GreaterThanZero" xml:space="preserve">
+    <value>{0} must be greater than 0.</value>
+  </data>
+  <data name="RangeBetween" xml:space="preserve">
+    <value>{0} must be between 1 and 99. </value>
+  </data>
+  <data name="RangeInvalid" xml:space="preserve">
+    <value>{0} range is invalid. Min must be less than or equal to Max.</value>
+  </data>
+
+ 
+
+  <!--  Auth / Token  -->
+
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid email or password.</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Changing</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed.</value>
+  </data>
+  <data name="Cancle" xml:space="preserve">
+    <value>Cancled.</value>
+  </data>
+  <data name="AccountInactive" xml:space="preserve">
+    <value>Account is inactive.</value>
+  </data>
+  <data name="LoggedOut" xml:space="preserve">
+    <value>Logged out successfully.</value>
+  </data>
+  <data name="TokenRefreshedSuccessfully" xml:space="preserve">
+    <value>Token refreshed successfully.</value>
+  </data>
+  <data name="RefreshTokenMissing" xml:space="preserve">
+    <value>Refresh token is missing.</value>
+  </data>
+  <data name="RefreshTokenInvalid" xml:space="preserve">
+    <value>Invalid or expired refresh token.</value>
+  </data>
+  <data name="InvalidOrExpiredRefreshToken" xml:space="preserve">
+    <value>Invalid or expired refresh token. Please login again.</value>
+  </data>
+
+  <!--  Password Reset  -->
+
+  <data name="ResetLinkInvalid" xml:space="preserve">
+    <value>Invalid or expired reset link.</value>
+  </data>
+  <data name="ResetLinkUsed" xml:space="preserve">
+    <value>This reset link has already been used.</value>
+  </data>
+  <data name="ResetLinkExpired" xml:space="preserve">
+    <value>Reset link expired. Please request a new one.</value>
+  </data>
+  <data name="ForgotPasswordSent" xml:space="preserve">
+    <value>If this email is registered, a reset link has been sent.</value>
+  </data>
+
+  <!--  Password Validation  -->
+
+  <data name="PasswordsMustMatch" xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+  <data name="NewPasswordSameAsOld" xml:space="preserve">
+    <value>New password must be different from the current password.</value>
+  </data>
+  <data name="CurrentPasswordIncorrect" xml:space="preserve">
+    <value>Current password is incorrect.</value>
+  </data>
+
+  <data name="PasswordMustContain" xml:space="preserve">
+    <value>Password must contain at least one {0}.</value>
+  </data>
+  <data name="PasswordResetSuccessfully" xml:space="preserve">
+  <value>Password reset successfully.</value>
+  </data>
+
+  <!--  Email Validation  -->
+
+  <data name="InvalidEmailFormat" xml:space="preserve">
+    <value>Invalid email format.</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>A valid email address is required.</value>
+  </data>
+  <data name="EmailNotFound" xml:space="preserve">
+    <value>No account found with this email address.</value>
+  </data>
+  <data name="EmailAlreadyExists" xml:space="preserve">
+    <value>Email already exists.</value>
+  </data>
+  <data name="EmailMaxLength" xml:space="preserve">
+    <value>Email must not exceed 255 characters.</value>
+  </data>
+
+  <!--  OTP  -->
+
+  <data name="OtpSentSuccessfully" xml:space="preserve">
+    <value>OTP sent successfully.</value>
+  </data>
+  <data name="OtpVerifiedSuccessfully" xml:space="preserve">
+    <value>OTP verified successfully.</value>
+  </data>
+  <data name="InvalidOrExpiredOtp" xml:space="preserve">
+    <value>Invalid or expired OTP.</value>
+  </data>
+  <data name="EmailAndOtpRequired" xml:space="preserve">
+    <value>Email and OTP are required.</value>
+  </data>
+  <data name="InvalidOtpLength" xml:space="preserve">
+    <value>OTP must be between 4 and 10 characters.</value>
+  </data>
+
+
+
+  <!--  Profile (uses UpdatedSuccessfully at call site)  -->
+
+  <data name="DefaultImageNotFound" xml:space="preserve">
+    <value>No default image found.</value>
+  </data>
+
+  <!--  Address / Geocoding  -->
+
+  <data name="GeocodingSuccessful" xml:space="preserve">
+    <value>Geocoding successful.</value>
+  </data>
+  <data name="GeocodingUnavailable" xml:space="preserve">
+    <value>Geocoding service unavailable.</value>
+  </data>
+  <data name="NoAddressDataReturned" xml:space="preserve">
+    <value>No address data returned.</value>
+  </data>
+  <!-- InvalidCoordinate -->
+  <data name="InvalidCoordinate" xml:space="preserve">
+    <value>{0} must be between {1} and {2}.</value>
+  </data>
+  <data name="InvalidMobileNumber" xml:space="preserve">
+    <value>Mobile number is invalid. Must be 7–15 digits.</value>
+  </data>
+  <data name="MobileAlreadyExists" xml:space="preserve">
+    <value>Mobile number already exists.</value>
+  </data>
+
+  <!--  File / Image  -->
+  <!-- REMOVED: ImageSize — use FileSizeExceeds with "Image" and 5 -->
+  <!-- REMOVED: FileSizeExceeded — use FileSizeExceeds with "File" and 20 -->
+  <data name="FileSizeExceeds" xml:space="preserve">
+    <value>{0} size exceeds {1}MB limit.</value>
+  </data>
+  <data name="FileTypeNotAllowed" xml:space="preserve">
+    <value>File type not allowed.</value>
+  </data>
+  <data name="FileRequired" xml:space="preserve">
+    <value>File is required.</value>
+  </data>
+
+  <!--Configuration -->
+
+  <data name="NotConfigured" xml:space="preserve">
+    <value>{0} is not configured.</value>
+  </data>
+
+  <!--  Field / Entity Name Labels  -->
+
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserStatus" xml:space="preserve">
+    <value>User's Status</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="SubCategory" xml:space="preserve">
+    <value>SubCategory</value>
+  </data>
+  <data name="ServiceType" xml:space="preserve">
+    <value>Service Type</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Service Name</value>
+  </data>
+  <data name="ServiceId" xml:space="preserve">
+    <value>Service Id</value>
+  </data>
+  <data name="ServicePartner" xml:space="preserve">
+    <value>Service Partner</value> 
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Offer</value>
+  </data>
+  <data name="Commission" xml:space="preserve">
+    <value>Commission</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="CouponCode" xml:space="preserve">
+    <value>Coupon Code</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailId" xml:space="preserve">
+    <value>Email Id</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Token" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="RefreshToken" xml:space="preserve">
+    <value>Refresh Token</value>
+  </data>
+  <data name="Otp" xml:space="preserve">
+    <value>OTP</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>Mobile Number</value>
+  </data>
+  <data name="MobileMaxLength" xml:space="preserve">
+    <value>Mobile number cannot exceed 20 characters.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Addresses" xml:space="preserve">
+    <value>Addresses</value>
+  </data>
+  <data name="HouseFlatNumber" xml:space="preserve">
+    <value>House/Flat Number</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="ApplyingFor" xml:space="preserve">
+    <value>Applying For</value>
+  </data>
+  <data name="PermanentAddress" xml:space="preserve">
+    <value>Permanent Address</value>
+  </data>
+  <data name="ResidentialAddress" xml:space="preserve">
+    <value>Residential Address</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="ServicesOffered" xml:space="preserve">
+    <value>Services Offered</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="SchoolCollege" xml:space="preserve">
+    <value>School/College</value>
+  </data>
+  <data name="SchoolCollegeMaxLength" xml:space="preserve">
+    <value>School/College cannot exceed 200 characters.</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="CompanyNameMaxLength" xml:space="preserve">
+    <value>Company name cannot exceed 200 characters.</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="RoleMaxLength" xml:space="preserve">
+    <value>Role cannot exceed 150 characters.</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="Proficiency" xml:space="preserve">
+    <value>Proficiency</value>
+  </data>
+  <data name="FileUrl" xml:space="preserve">
+    <value>File URL</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="InvalidPassingYear" xml:space="preserve">
+    <value>Please enter a valid passing year.</value>
+  </data>
+  <data name="PageNumber" xml:space="preserve">
+    <value>Page Number</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Page Size</value>
+  </data>
+  <!-- New labels for dynamic messages -->
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="ProfileImage" xml:space="preserve">
+    <value>Profile Image</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="OtpSecretKey" xml:space="preserve">
+    <value>OTP secret key</value>
+  </data>
+  <data name="JwtKey" xml:space="preserve">
+    <value>JWT key</value>
+  </data>
+  <data name="JwtIssuer" xml:space="preserve">
+    <value>JWT issuer</value>
+  </data>
+  <data name="JwtAudience" xml:space="preserve">
+    <value>JWT audience</value>
+  </data>
+  <data name="SmtpEmail" xml:space="preserve">
+    <value>SMTP email</value>
+  </data>
+  <data name="UppercaseLetter" xml:space="preserve">
+    <value>uppercase letter</value>
+  </data>
+  <data name="LowercaseLetter" xml:space="preserve">
+    <value>lowercase letter</value>
+  </data>
+  <data name="Digit" xml:space="preserve">
+    <value>digit</value>
+  </data>
+  <data name="SpecialCharacter" xml:space="preserve">
+    <value>special character</value>
+  </data>
+  <data name="Unavailable" xml:space="preserve">
+    <value>{0} is currently unavailable.</value>
+  </data>
+<data name="BookingDatePast" xml:space="preserve">
+  <value>Booking date cannot be in the past.</value>
+</data>
+  <data name="Unauthorize" xml:space="preserve">
+    <value>User is not authorized</value>
+  </data>
+
+<data name="BookingTimeFormat" xml:space="preserve">
+  <value>Booking time must be in HH:mm format</value>
+</data>
+
+<data name="SlotUnavailable" xml:space="preserve">
+  <value>Currently no service partner available for this time slot.</value>
+</data>
+
+<data name="AddressNotBelongsToUser" xml:space="preserve">
+  <value>Address does not belong to the current user.</value>
+</data>
+
+<data name="PaymentMethodInvalid" xml:space="preserve">
+  <value>Payment method must be Card or Cash</value>
+</data>
+
+<data name="Booking" xml:space="preserve">
+  <value>Booking</value>
+</data>
+<data name="Transaction" xml:space="preserve">
+  <value>Transaction</value>
+</data>
+<data name="BookingId" xml:space="preserve">
+  <value>Booking ID</value>
+</data>
+
+<data name="NewPartnerId" xml:space="preserve">
+  <value>New Partner ID</value>
+</data>
+
+<data name="CancellationReason" xml:space="preserve">
+  <value>Cancellation Reason</value>
+</data>
+
+<data name="BookingTime" xml:space="preserve">
+  <value>Booking time must be valid</value>
+</data>
+<data name="CouponAlreadyUsed" xml:space="preserve">
+  <value>This coupon has already been used by you.</value>
+</data>
+<data name="CouponAppliedSuccessfully" xml:space="preserve">
+  <value>Coupon applied successfully.</value>
+</data>
+<data name="CouponUsageLimitReached" xml:space="preserve">
+  <value>This coupon has reached its maximum usage limit.</value>
+</data>
+<data name="DuplicateBookingSlot" xml:space="preserve">
+  <value>You have already booked this service at the selected date and time.</value>
+</data>
+
+<data name="ServiceDurationNotConfigured" xml:space="preserve">
+  <value>Service duration is not configured.</value>
+</data>
+
+<data name="SlotAvailable" xml:space="preserve">
+  <value>Slot is available.</value>
+</data>
+
+<data name="SlotNotAvailable" xml:space="preserve">
+  <value>Selected slot is not available.</value>
+</data>
+
+<data name="BookingCompletionServiceStarted" xml:space="preserve">
+  <value>BookingCompletionService started.</value>
+</data>
+
+<data name="BookingCompletionServiceStopped" xml:space="preserve">
+  <value>BookingCompletionService stopped.</value>
+</data>
+
+<data name="BookingCompletionServiceCompleted" xml:space="preserve">
+  <value>BookingCompletionService: marked {0} booking(s) as Completed.</value>
+</data>
+
+<data name="BookingCompletionServiceError" xml:space="preserve">
+  <value>BookingCompletionService: error while completing expired bookings.</value>
+</data>
+
+<data name="PaymentNotCompleted" xml:space="preserve">
+  <value>Payment has not been completed. Please complete payment first.</value>
+</data>
+
+<data name="PaymentAlreadyUsed" xml:space="preserve">
+  <value>This payment has already been used to create a booking.</value>
+</data>
+
+<data name="CardPaymentUseIntent" xml:space="preserve">
+  <value>Card payments must use the /api/payment/create-intent.</value>
+</data>
+
+<data name="UserName" xml:space="preserve">
+  <value>User Name</value>
+</data>
+
+<data name="InvalidDate" xml:space="preserve">
+  <value>Invalid Date</value>
+</data>
+
+<data name="SubmittedAt" xml:space="preserve">
+  <value>Submitted At</value>
+</data>
+
+<data name="FirstName" xml:space="preserve">
+  <value>First Name</value>
+</data>
+
+<data name="SupportTicket" xml:space="preserve">
+  <value>Support Ticket</value>
+</data>
+
+<data name="UnauthorizedPasswordChange" xml:space="preserve">
+  <value> Unauthorized Password Change</value>
+</data>
+
+<data name="NoBookingsFound" xml:space="preserve">
+  <value>No bookings found.</value>
+</data>
+
+<data name="PartnerNotYetAssigned" xml:space="preserve">
+  <value>Service partner not yet assigned.</value>
+</data>
+
+<data name="ApprovedSuccessfully" xml:space="preserve">
+    <value>{0} approved successfully.</value>
+</data>
+
+<data name="RejectedSuccessfully" xml:space="preserve">
+  <value>{0} rejected successfully.</value>
+</data>
+
+<data name="AlreadyApproved" xml:space="preserve">
+  <value>This service partner has already been approved.</value>
+</data>
+
+<data name="AlreadyRejected" xml:space="preserve">
+  <value>This service partner has already been rejected.</value>
+</data>
+
+<data name="ServicePartnerNotVerified" xml:space="preserve">
+  <value>Assigned services are only available for verified service partners.</value>
+</data>
+
+<data name="InvalidValue" xml:space="preserve">
+  <value>Invalid Value</value>
+</data>
+
+<data name="ActionNotAllowed" xml:space="preserve">
+  <value>"{0} {1} action is not allowed when booking is {2}."</value>
+</data>
+  <data name="AlreadyCompleted" xml:space="preserve">
+    <value>This booking is already completed and cannot be completed again.</value>
+  </data>
+   <data name="AlreadyCancled" xml:space="preserve">
+    <value>A cancelled booking cannot be marked as completed.</value>
+  </data>
+  <data name="AccountBlocked" xml:space="preserve">
+    <value>Your account has been blocked. Please contact support.</value>
+  </data>
+  <data name="BaseURLConfiguration" xml:space="preserve">
+    <value>BaseUrl is not configured.</value>
+  </data>
+  <data name="InvalidImageType" xml:space="preserve">
+    <value>This image type is not accepted.</value>
+  </data>
+  <data name="BookingsCancelledOnBlock" xml:space="preserve">
+    <value>Your account has been blocked by the administrator. All active bookings have been cancelled.</value>
+  </data>
+  <data name="BookingsCancelledOnDelete" xml:space="preserve">
+    <value>Your account has been deleted by the administrator. All active bookings have been cancelled.</value>
+  </data>
+  <data name="ValidLink" xml:space="preserve">
+    <value>Reset Link is Valid</value>
+  </data>
+
+  <data name="ServiceUnavailable" xml:space="preserve">
+    <value>This service is currently unavailable. Please choose a different service.</value>
+  </data>
+  <data name="CannotDeleteActiveBookings" xml:space="preserve">
+    <value>Cannot delete this {0} as there are ongoing bookings. Please wait until all bookings are completed.</value>
+  </data>
+  <data name="CannotPartnerSoleAssigned" xml:space="preserve">
+    <value>Cannot {0} this service partner. They are the only expert assigned to booking(s).</value>
+  </data>
+  <data name="CannotDeactivatePartnerChangeExpert" xml:space="preserve">
+    <value>Cannot deactivate this service partner. They have pending booking(s) assigned.</value>
+  </data>
+  <data name="CannotDeletePartnerSoleAssigned" xml:space="preserve">
+    <value>Cannot delete this service partner. They are the only expert assigned to booking.</value>
+  </data>
+  <data name="CannotDeletePartnerChangeExpert" xml:space="preserve">
+    <value>Cannot delete this service partner. They have pending booking(s) assigned.</value>
+  </data>
+   <data name="AccountDeleted" xml:space="preserve">
+    <value>This Account is already Deleted</value>
+  </data>
+</root>

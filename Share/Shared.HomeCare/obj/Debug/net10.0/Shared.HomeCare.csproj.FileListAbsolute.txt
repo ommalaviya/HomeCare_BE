@@ -1,0 +1,17 @@
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\bin\Debug\net10.0\Shared.HomeCare.deps.json
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\bin\Debug\net10.0\Shared.HomeCare.runtimeconfig.json
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\bin\Debug\net10.0\Shared.HomeCare.dll
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\bin\Debug\net10.0\Shared.HomeCare.pdb
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.csproj.AssemblyReference.cache
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.Resources.Messages.resources
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.csproj.GenerateResource.cache
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.GeneratedMSBuildEditorConfig.editorconfig
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.AssemblyInfoInputs.cache
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.AssemblyInfo.cs
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.csproj.CoreCompileInputs.cache
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.sourcelink.json
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.dll
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\refint\Shared.HomeCare.dll
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.pdb
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\Shared.HomeCare.genruntimeconfig.cache
+d:\Deploy\HomeCare_BE\Share\Shared.HomeCare\obj\Debug\net10.0\ref\Shared.HomeCare.dll
