@@ -194,16 +194,16 @@ namespace Public.Application.HomeCare.Services
             Response.Cookies.Append(AuthConstants.AccessTokenCookie, accessToken, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = false,
-                SameSite = SameSiteMode.Lax,
+                Secure = true,
+                SameSite = SameSiteMode.None,
                 Expires = DateTimeOffset.UtcNow.AddMinutes(accessExpiry)
             });
 
             Response.Cookies.Append(AuthConstants.RefreshTokenCookie, refreshToken, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = false,
-                SameSite = SameSiteMode.Lax,
+                Secure = true,
+                SameSite = SameSiteMode.None,
                 Path = "/api/otp",
                 Expires = DateTimeOffset.UtcNow.AddMinutes(refreshExpiry)
             });
