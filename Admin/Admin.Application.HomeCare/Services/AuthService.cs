@@ -194,8 +194,8 @@ namespace Admin.Application.HomeCare.Services
             Response.Cookies.Append(AuthConstants.RefreshTokenCookie, refreshToken, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = IsSecureCookie,
-                SameSite = SameSiteMode.Strict,
+                Secure = true,
+                SameSite = SameSiteMode.None,
                 Path = "/api/auth",
                 Expires = DateTimeOffset.UtcNow.AddMinutes(refreshExpiry)
             });
@@ -208,17 +208,25 @@ namespace Admin.Application.HomeCare.Services
             Response.Cookies.Append(AuthConstants.AccessTokenCookie, accessToken, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = IsSecureCookie,
-                SameSite = SameSiteMode.Lax,
+                Secure = true,
+                SameSite = SameSiteMode.None,
                 Expires = DateTimeOffset.UtcNow.AddMinutes(accessExpiry)
             });
         }
 
         private void DeleteAuthCookies()
         {
-            Response.Cookies.Delete(AuthConstants.AccessTokenCookie);
-            Response.Cookies.Delete(AuthConstants.RefreshTokenCookie,
-                new CookieOptions { Path = "/api/auth" });
+            Response.Cookies.Delete(AuthConstants.AccessTokenCookie, new CookieOptions
+            {
+                Secure = true,
+                SameSite = SameSiteMode.None
+            });
+            Response.Cookies.Delete(AuthConstants.RefreshTokenCookie, new CookieOptions
+            {
+                Path = "/api/otp",
+                Secure = true,
+                SameSite = SameSiteMode.None
+            });
         }
 
         // JWT validation helper
