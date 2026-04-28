@@ -91,13 +91,18 @@ var adminFrontendUrl = Environment.GetEnvironmentVariable("ADMIN_FRONTEND_URL")
     ?? builder.Configuration["Frontend:BaseUrl"]
     ?? "http://localhost:4200";
 
+var publicFrontendUrl = Environment.GetEnvironmentVariable("PUBLIC_FRONTEND_URL")
+    ?? "http://localhost:4300";
+
 builder.Services.AddCors(o => o.AddPolicy("AllowAngularAdmin", p =>
     p.WithOrigins(
-        adminFrontendUrl, 
+        adminFrontendUrl,
+        publicFrontendUrl,
         "http://localhost:4200", 
         "http://localhost:4300",
         "https://homecare-admin-frontend.vercel.app",
-        "https://homecare-admin-frontend-2adsz2ajj-oms-projects-de56b349.vercel.app"
+        "https://homecare-admin-frontend-2adsz2ajj-oms-projects-de56b349.vercel.app",
+        "https://homecare-customer-frontend.vercel.app"
     )
      .AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
 
