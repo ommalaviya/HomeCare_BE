@@ -87,7 +87,11 @@ var publicFrontendUrl = Environment.GetEnvironmentVariable("PUBLIC_FRONTEND_URL"
     ?? "http://localhost:4300";
 
 builder.Services.AddCors(o => o.AddPolicy("AllowAngularCustomer", p =>
-    p.WithOrigins(publicFrontendUrl, "http://localhost:4300")
+    p.WithOrigins(
+        publicFrontendUrl, 
+        "http://localhost:4300",
+        "https://homecare-customer-frontend.vercel.app"
+    )
      .AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
 
 var app = builder.Build();
