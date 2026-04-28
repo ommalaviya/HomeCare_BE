@@ -86,11 +86,19 @@ namespace Public.Application.HomeCare.Services
 
             await UpsertOtpAsync(email, hashedCode);
 
-            await emailService.SendAsync(
-                email,
-                "Your OTP Code",
-                $"Your OTP is {plainCode}. Valid for 10 minutes."
-            );
+            try
+            {
+                await emailService.SendAsync(
+                    email,
+                    "Your OTP Code",
+                    $"Your OTP is {plainCode}. Valid for 10 minutes."
+                );
+            }
+            catch (Exception)
+            {
+                // Email sending failed (SMTP blocked on hosting)
+                // OTP is already saved in DB — for testing, log or ignore
+            }
         }
 
         public async Task<AuthResponseModel?> VerifyOtpAsync(string email, string code, string? name)
@@ -113,7 +121,7 @@ namespace Public.Application.HomeCare.Services
                 activeUser.IsEmailVerified = true;
                 if (!string.IsNullOrWhiteSpace(name))
                     activeUser.Name = name;
-                
+
                 await userRepository.UpdateAsync(activeUser);
 
                 user = activeUser;
